@@ -120,6 +120,7 @@
   width: 100vw;
   height: 300px;
   margin-top: 15vh;
+  overflow-x: hidden;
 }
 
 .pic-ctn > img {
@@ -131,7 +132,7 @@
   width: 200px;
   height: 270px;
   border-radius: 5px;
-  
+  overflow-x: hidden;
 }
 
 img:nth-child(2) {
