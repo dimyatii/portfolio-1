@@ -8,7 +8,7 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background-color: #000000;
   overflow-x: hidden;
 }
 
@@ -94,6 +94,310 @@ body {
 .bot:nth-child(8) { animation-delay: 1.5s; }
 .bot:nth-child(9) { animation-delay: 1.7s; }
 
+
+
+/* ====== contact ====== */
+.body-contact{ 
+	overflow: hidden;
+}
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+.hidden{
+	display: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.half{
+	width: 50%;
+}
+a,
+button,
+input{
+	-moz-outline-style: none;
+	outline-style: none;
+}
+button{
+	cursor: pointer;
+}
+/* button{
+	border: none;
+} */
+a:hover,
+a:focus,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+
+/* ====== content ====== */
+
+header{
+	h4{
+		text-transform: uppercase;
+		font-size: 18px;
+		position: absolute;
+		z-index: 10;
+		top: 20px;
+		left: 50px;
+	}
+}
+.central-logo-wrapper{
+	z-index: 1;
+	background: #ececec;
+	padding-top: 22vh;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+}
+.central-logo{
+	overflow: hidden;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 250px;
+  font-family: times;
+	letter-spacing: 3vw;
+	text-align: center;
+	animation: kotra-raise 4s linear;
+	transform: scale(1.05);
+	&::before{
+		content: '';
+		height: 100%;
+		width: 100%;
+		background: #ececec;
+		position: absolute;
+		animation: kotra-reveal 2s cubic-bezier(0, 0.7, 0.9, 1);
+		transform: translateY(-100%);
+	}
+}
+
+/* ====== Registration form ====== */
+.whitebutt{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	position: absolute;
+	padding: 10px 70px 10px 70px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+.contact-us{
+	top: 0;
+	left: 0;
+	animation: contact-us-reveal 5s linear;
+}
+.close-butt{
+	top: 0;
+	right: 0;
+	transform: translateY(-100%);
+	animation: close-butt-reveal 5s linear;
+}
+.reg-form-wrapper{
+	min-height:50vh;
+	width: 100vw;
+	background: #161616;
+	z-index: 9;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	animation: regform-reveal 4s ease;
+  margin-bottom: -20px;
+
+}
+
+.reg-form{
+	input{
+		color: #fff;
+		background: #212121;
+		border: none;
+		height: 60px;
+		padding: 20px;
+		position: absolute;
+   
+	}
+	.name{
+		width: 42vw;
+		left: 0;
+		bottom: 100px;
+    top: 100px;
+    border-radius: 2px;
+	}
+	.email{
+		width: 56.5vw;
+		right: 0;
+		bottom: 100px;
+    top: 100px;
+    border-radius: 2px;
+	}
+	.message{
+		bottom: 20px;
+		width: 78vw;
+		margin-top: 200px;
+    /* display: none; */
+    background-color: #212121;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding-left: 20px;
+    padding-top: 25px;
+    scrollbar-width: none;
+    border-radius: 2px;
+	}
+  
+	.send{
+		bottom: 0;
+		right: 0;
+		width: 20vw;
+		margin-top: 2vh;
+		height: 70px;
+		background: #fff;
+		color: #000;
+		text-transform: uppercase;
+    font-family: times;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 2px;
+    top: -30px;
+    position: relative;
+
+	}
+
+  .send:hover {
+    background-color: #c5c5c5;
+  }
+}
+
+/*====== Animations ======*/
+
+@keyframes kotra-reveal{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes kotra-raise{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.05);
+	}
+}
+
+@keyframes regform-reveal{
+	from{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	50%{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	to{
+		clip: rect(auto, 100vw, auto, 0vw);
+	}
+}
+
+@keyframes contact-us-reveal{
+	from{
+		clip: rect(0, auto, 0, auto);
+	}
+	80%{
+		clip: rect(0, auto, 0, auto);	
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+
+@keyframes close-butt-reveal{
+	from{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	80%{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+
+/*====== Animations ======*/
+
+@keyframes kotra-reveal{
+	from{
+		transform: translateY(0%);
+	}
+	to{
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes kotra-raise{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.05);
+	}
+}
+
+@keyframes regform-reveal{
+	from{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	50%{
+		clip: rect(auto, 100vw, auto, 100vw);
+	}
+	to{
+		clip: rect(auto, 100vw, auto, 0vw);
+	}
+}
+
+@keyframes contact-us-reveal{
+	from{
+		clip: rect(0, auto, 0, auto);
+	}
+	80%{
+		clip: rect(0, auto, 0, auto);	
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+
+@keyframes close-butt-reveal{
+	from{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	80%{
+		clip: rect(40px, auto, 40px, auto);
+	}
+	to{
+		clip: rect(0, auto, 40px, auto);	
+	}
+}
+
+
+
+
+
+
+
+
+
 /* Keyframes */
 @keyframes slideFromRight {
   0% { transform: translateX(100%) rotate(-6deg); opacity: 0; }
@@ -110,10 +414,10 @@ body {
   100% { transform: translate(0, 0) rotate(-6deg); opacity: 1; }
 }
 
-/* Nav */
+/* Main Nav */
 .main-nav {
   position: fixed;
-  bottom: 30px;
+  bottom: 30px; 
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -121,21 +425,68 @@ body {
   backdrop-filter: blur(8px);
   padding: 10px 25px;
   border-radius: 30px;
+  
+  
 }
 .main-nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  
+  
 }
 .main-nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   transition: color 0.3s ease;
+  
+
+ 
 }
 .main-nav a:hover {
   color: #ffcc70;
 }
+
+/* CONTACT NAV */
+
+.contact-nav {
+  position: fixed;
+  bottom: 90%; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: rgba(168, 168, 168, 0.219);
+  backdrop-filter: blur(8px);
+  padding: 10px 25px;
+  border-radius: 30px;
+  
+  
+}
+.contact-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  
+  
+}
+.contact-nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  
+
+ 
+}
+.contact-nav a:hover {
+  color: #d1d1d1;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -150,5 +501,4 @@ body {
     font-size: 1rem;
   }
 }
-
 
