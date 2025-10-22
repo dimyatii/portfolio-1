@@ -331,72 +331,6 @@ header{
 	}
 }
 
-/*====== Animations ======*/
-
-@keyframes kotra-reveal{
-	from{
-		transform: translateY(0%);
-	}
-	to{
-		transform: translateY(-100%);
-	}
-}
-
-@keyframes kotra-raise{
-	from{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(1);
-	}
-	to{
-		transform: scale(1.05);
-	}
-}
-
-@keyframes regform-reveal{
-	from{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	50%{
-		clip: rect(auto, 100vw, auto, 100vw);
-	}
-	to{
-		clip: rect(auto, 100vw, auto, 0vw);
-	}
-}
-
-@keyframes contact-us-reveal{
-	from{
-		clip: rect(0, auto, 0, auto);
-	}
-	80%{
-		clip: rect(0, auto, 0, auto);	
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
-
-@keyframes close-butt-reveal{
-	from{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	80%{
-		clip: rect(40px, auto, 40px, auto);
-	}
-	to{
-		clip: rect(0, auto, 40px, auto);	
-	}
-}
-
-
-
-
-
-
-
-
 
 /* Keyframes */
 @keyframes slideFromRight {
@@ -501,4 +435,5 @@ header{
     font-size: 1rem;
   }
 }
+
 
