@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="page-contact.html"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-    
+
+<body class="contact-page">
+
   <!-- NAVIGATION -->
   <nav class="contact-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="page-profile.html">Profile</a></li>
+      <li><a href="page-profile.html">About me</a></li>
       <li><a href="page-gallery.html">Gallery</a></li>
       <li><a href="page-blog.html">Blog</a></li>
-      <li><a href="page-contact.html">Contact</a></li>
+      <li><a href="page-contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
-    <div class="central-logo-wrapper">
-      <div class="central-logo">
-        DIMYATI
-      </div>
-    </div>
-    
-    <div class="reg-form-wrapper">
-      <div class="whitebutt contact-us">
-        Contact Us
-      </div>
-      
-      <form action="https://api.web3forms.com/submit" method="post"  class="reg-form">
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" data-aos="fade-up">
+    <div class="container contact-container">
+      <h1 class="contact-title">Get in Touch</h1>
+      <p class="contact-subtitle">We'd love to hear from you. Please fill out the form below.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="2c5c0d71-5984-4bcd-8e8a-191d721dcaad">
-        <input class="name" name="name" type="name" placeholder="Name" required>
-        <input class="email" name="email" type="email" placeholder="Email" required>
-        <textarea class="message" name="message" type="text" placeholder="Your message" required></textarea>
-        <button class="send" type="submit" value="Send">send</button>
+
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send Message</button>
       </form>
     </div>
+  </section>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+  <!-- FOOTER -->
+  <footer class="contact-footer">
+    <p>© 2025 DIMYATI | Jangan lupa hire saya sebelum saya keburu jadi seleb TikTok.</p>
+
+  <p>
+    Udah isi form di atas ?! Atau kalau cuma mau stalking, bisa
+    <a href="https://www.instagram.com/dimytie?igsh=MTBvYnpqdnJuNHFzeA==" target="_blank" rel="noopener noreferrer"
+       aria-label="Buka profil Instagram Dimyati (membuka di tab baru)">
+      klik di sini
+    </a>
+    untuk lihat akun Instagram saya ✋😐🤚
+  </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
     AOS.init();
-    </script>
-  </body>
+  </script>
+</body>
 </html>
-
-
