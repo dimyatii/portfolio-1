@@ -89,8 +89,8 @@ body {
                  0 0 16px rgba(255, 204, 112, 0.2);
   }
   100% {
-    text-shadow: 0 0 12px rgba(255, 204, 112, 0.8),
-                 0 0 24px rgba(255, 204, 112, 0.6);
+    text-shadow: 0 0 12px rgba(56, 56, 55, 0.8),
+                 0 0 24px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -650,3 +650,4 @@ html, body {
     padding: 40px 15px;
   }
 }
+
