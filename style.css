@@ -634,6 +634,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
 }
 
 /* Header Blog */
@@ -762,5 +763,6 @@ html, body {
     padding: 40px 15px;
   }
 }
+
 
 
