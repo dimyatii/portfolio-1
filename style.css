@@ -329,8 +329,7 @@ body {
   }
 
   .home_page {
-    padding-top: 50px;
-    bottom: 50px;
+	overflow: hidden;
   }
 }
 
@@ -805,5 +804,6 @@ html, body {
     padding: 40px 15px;
   }
 }
+
 
 
