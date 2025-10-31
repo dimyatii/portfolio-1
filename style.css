@@ -327,6 +327,11 @@ body {
   .grid-item.bot.\31  {
     display: none;
   }
+
+  .home_page {
+    padding-top: 50px;
+    bottom: 50px;
+  }
 }
 
 
@@ -796,3 +801,4 @@ html, body {
     padding: 40px 15px;
   }
 }
+
