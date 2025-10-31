@@ -11,13 +11,33 @@
 </head>
 <body class="home_page">
 
+  <!-- NAVBAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="logo">Dimyati</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="page-profile.html">Bio</a></li>
+      <li><a href="random-teks-anonim.html">Teks Anonim</a></li>
+      <li><a href="page-blog.html">Blog</a></li>
+      <li><a href="page-contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
 
   <!-- HERO GRID SECTION -->
-  <section class="hero-grid">
+  <section  class="hero-grid">
+    <a href="random-teks-anonim.html">
     <div class="overlay-text">
       <h1>Welcome to My World</h1>
       <p>Creative & Unique — This is my portfolio</p>
-    </div>
+      </div>
+    </a>
 
     <div class="grid-container">
       <!-- Baris atas -->
@@ -37,17 +57,39 @@
     </div>
   </section>
 
-  <!-- NAVIGATION -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="page-profile.html">Bio</a></li>
-      <li><a href="page-gallery.html">Gallery</a></li>
-      <li><a href="page-blog.html">Blog</a></li>
-      <li><a href="page-contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  
+
+   <script>
+
+// Toggle hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+function openMenu(){
+  navLinks.classList.add('show');
+  document.body.classList.add('menu-open');
+}
+
+function closeMenu(){
+  navLinks.classList.remove('show');
+  document.body.classList.remove('menu-open');
+}
+
+hamburger.addEventListener('click', ()=>{
+  if(navLinks.classList.contains('show')){
+    closeMenu();
+  }else{
+    openMenu();
+  }
+});
+
+// Tutup menu jika klik area luar
+document.body.addEventListener('click', (e)=>{
+  if(navLinks.classList.contains('show') && !navLinks.contains(e.target) && !hamburger.contains(e.target)){
+    closeMenu();
+  }
+});
+
+  </script>
 
 </body>
 </html>
