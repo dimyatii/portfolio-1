@@ -635,6 +635,10 @@ html, body {
   .contact-page{
     margin-top: -120px;
   }
+
+  .contact-container{
+    margin-top: 120px;
+  }
 }
 
 /* Responsive */
@@ -801,4 +805,5 @@ html, body {
     padding: 40px 15px;
   }
 }
+
 
