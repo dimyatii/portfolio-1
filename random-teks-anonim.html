@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
+<link rel="stylesheet" href="style.css" />
 <title>Random Teks Anonim 💭</title>
+
 <style>
 /* === THEME DARK MODERN RESPONSIVE === */
 body {
@@ -19,31 +17,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: background 0.5s;
   margin-top: 150px;
+  transition: background 0.5s;
 }
 
-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
+header { text-align: center; padding: 2rem 1rem 1rem; }
+header h1 { font-size: 2rem; color: #a78bfa; margin-bottom: 0.3rem; text-shadow: 0 0 10px #a78bfa44; }
+header p { color: #ccc; font-size: 0.95rem; }
 
-header h1 {
-  font-size: 2rem;
-  color: #a78bfa;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 10px #a78bfa44;
-}
-
-header p {
-  color: #ccc;
-  font-size: 0.95rem;
-}
-
-main {
-  width: 90%;
-  max-width: 700px;
-}
+main { width: 90%; max-width: 700px; }
 
 .form-container {
   background: #181818;
@@ -54,20 +36,15 @@ main {
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .form-container:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-label {
-  display: block;
-  margin-top: 1rem;
-  color: #bbb;
-}
+label { display: block; margin-top: 1rem; color: #bbb; }
 
 input, textarea {
-  width: 95%;
+  width: 98%;
   background: #2a2a2a;
   border: none;
   border-radius: 8px;
@@ -78,23 +55,10 @@ input, textarea {
   margin-top: 0.5rem;
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-
 input:focus, textarea:focus {
   background: #333;
   box-shadow: 0 0 10px #8b5cf6aa;
   transform: scale(1.02);
-}
-
-/* Placeholder animasi melayang */
-input::placeholder, textarea::placeholder {
-  color: #999;
-  opacity: 1;
-  transition: transform 0.3s, color 0.3s;
-}
-
-input:focus::placeholder, textarea:focus::placeholder {
-  transform: translateY(-5px);
-  color: #8b5cf6;
 }
 
 /* Tombol kirim */
@@ -109,17 +73,10 @@ button {
   margin-top: 1.2rem;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+button:hover { transform: scale(1.08); box-shadow: 0 0 20px #8b5cf6aa; }
+button:active { transform: scale(0.95); }
 
-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #8b5cf6aa;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* Loader animasi */
+/* Loader */
 .loader {
   display: none;
   width: 40px;
@@ -130,11 +87,7 @@ button:active {
   animation: spin 1s linear infinite;
   margin: 1rem auto;
 }
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
 
 /* Notifikasi */
 .notif {
@@ -146,7 +99,6 @@ button:active {
   font-size: 0.95rem;
   transition: opacity 0.3s, transform 0.3s;
 }
-
 .notif.success { background: #22c55e33; color: #4ade80; }
 .notif.error { background: #ef444433; color: #f87171; }
 
@@ -157,6 +109,7 @@ button:active {
   margin-bottom: 2rem;
 }
 
+/* Gaya tiap pesan */
 .message {
   background: #1f1f1f;
   border-left: 5px solid #8b5cf6;
@@ -166,37 +119,31 @@ button:active {
   animation: fadeIn 0.5s ease;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.message.new {
-  animation: bounceGlow 2s ease;
-}
-
-.message:hover {
-  transform: translateX(3px);
-  box-shadow: 0 6px 18px rgba(139,92,246,0.5);
-}
+.message.new { animation: bounceGlow 2s ease; }
+.message:hover { transform: translateX(3px); box-shadow: 0 6px 18px rgba(139,92,246,0.5); }
 
 .message h3 { margin: 0; color: #a78bfa; }
 .message p { margin-top: 0.4rem; color: #ddd; white-space: pre-wrap; }
+
+/* Efek teks dicoret otomatis */
+.message.strike p {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #fdfdfd;
+}
+
 small { display:block; color:#777; margin-top:0.5rem; font-size:0.8rem; text-align:right; }
 
-footer {
-  padding: 1rem;
-  color: #555;
-  text-align: center;
-  font-size: 0.8rem;
-}
+footer { padding: 1rem; color: #555; text-align: center; font-size: 0.8rem; }
 
 @keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
-
 @keyframes bounceGlow {
-  0% { transform: scale(0.9); box-shadow:0 0 0px #8b5cf6aa; }
-  50% { transform: scale(1.05); box-shadow:0 0 25px #8b5cf6aa; }
+  0% { transform: scale(0.9); box-shadow:0 0 0px #ffffffaa; }
+  50% { transform: scale(1.05); box-shadow:0 0 10px #ffffffaa; }
   70% { transform: scale(0.98); }
-  100% { transform: scale(1); box-shadow:0 0 0px #8b5cf6aa; }
+  100% { transform: scale(1); box-shadow:0 0 0px #ffffffaa; }
 }
 
-/* Responsive mobile */
 @media(max-width:480px){
   header h1 { font-size:1.5rem; }
   input, textarea, button { font-size:0.95rem; }
@@ -206,13 +153,13 @@ footer {
 </head>
 <body>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
 <nav class="main-nav">
   <div class="nav-container">
     <div class="logo">Dimyati</div>
     <ul class="nav-links">
       <li><a href="index.html" >Home</a></li>
-      <li><a href="page-profile.html">Bio</a></li>
+      <li><a href="page-profile.html" >Bio</a></li>
       <li><a href="random-teks-anonim.html" class="active">Teks Anonim</a></li>
       <li><a href="page-blog.html">Blog</a></li>
       <li><a href="page-contact.html">Contact</a></li>
@@ -224,6 +171,7 @@ footer {
     </div>
   </div>
 </nav>
+
 
 
 <header>
@@ -251,8 +199,9 @@ footer {
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
 <script>
-// Firebase config
+// === Firebase Config ===
 const firebaseConfig = {
   apiKey: "AIzaSyA9Jx4irqQtIMkFlPEt5YgfMPtz4gu1ssE",
   authDomain: "random-teks-anonim.firebaseapp.com",
@@ -273,39 +222,79 @@ const loader=document.getElementById("loader");
 const notif=document.getElementById("notif");
 const messagesList=document.getElementById("messagesList");
 
-// Kirim data
+// 🎨 Palet warna random
+const colorPalette = [
+  "#8b5cf6","#6366f1","#ec4899","#10b981","#f59e0b",
+  "#3b82f6","#14b8a6","#a855f7","#f43f5e","#22c55e"
+];
+
+let lastColor = null;
+// 🔁 Pilih warna acak tapi tidak boleh sama dengan sebelumnya
+function getRandomColor() {
+  let color;
+  do {
+    color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+  } while (color === lastColor);
+  lastColor = color;
+  return color;
+}
+
+// 🚫 Kata terlarang — otomatis dicoret
+const bannedWords = ["jokowi","prabowo","megawati","bahlil","anies","ganjar","mahfud","sandiaga"];
+
+// === KIRIM PESAN ===
 sendBtn.addEventListener("click", ()=>{
   const name=nameInput.value.trim()||"Anonim 🤫";
   const message=messageInput.value.trim();
   if(!message){showNotif("Curhatanmu jangan kosong 😅","error");return;}
   
   loader.style.display="block"; sendBtn.disabled=true;
-  db.ref("curhatan").push({name,message,time:new Date().toLocaleString()})
-    .then(()=>{
-      loader.style.display="none"; sendBtn.disabled=false; messageInput.value="";
-      showNotif("Curhatan berhasil dikirim 💌","success"); fireConfetti();
-    })
-    .catch(err=>{
-      loader.style.display="none"; sendBtn.disabled=false;
-      showNotif("Gagal mengirim: "+err.message,"error");
-    });
+  db.ref("curhatan").push({
+    name,
+    message,
+    time:new Date().toLocaleString(),
+    color:getRandomColor() // simpan warna acak ke database
+  })
+  .then(()=>{
+    loader.style.display="none"; sendBtn.disabled=false; messageInput.value="";
+    showNotif("Curhatan berhasil dikirim 💌","success");
+    fireConfetti(); // 🎊 Efek confetti 2 detik
+  })
+  .catch(err=>{
+    loader.style.display="none"; sendBtn.disabled=false;
+    showNotif("Gagal mengirim: "+err.message,"error");
+  });
 });
 
-// Notifikasi
+// === NOTIFIKASI ===
 function showNotif(text,type){
   notif.innerText=text; notif.className="notif "+type;
   notif.style.display="block"; notif.style.opacity=1;
   setTimeout(()=>{ notif.style.opacity=0; setTimeout(()=>notif.style.display="none",500); },3000);
 }
 
-// Real-time listener
+// === REAL-TIME MESSAGES ===
 db.ref("curhatan").on("value",snapshot=>{
   const data=snapshot.val(); messagesList.innerHTML="";
   if(data){
     Object.keys(data).forEach(id=>{
       const msg=data[id];
-      const div=document.createElement("div"); div.classList.add("message","new");
-      div.innerHTML=`<h3>${msg.name}</h3><p>${msg.message}</p><small>${msg.time}</small>`;
+      const div=document.createElement("div");
+      div.classList.add("message","new");
+
+      // 🟣 Warna acak dari database (agar tetap konsisten)
+      const color = msg.color || getRandomColor();
+      div.style.borderLeft = `5px solid ${color}`;
+      div.style.boxShadow = `0 4px 5px ${color}55`;
+
+      // 🚫 Cek apakah mengandung kata terlarang
+      const lowerMsg = msg.message.toLowerCase();
+      const hasBanned = bannedWords.some(word => lowerMsg.includes(word));
+      if (hasBanned) div.classList.add("strike");
+
+      div.innerHTML=`<h3 style="color:${color}">${msg.name}</h3>
+                     <p>${msg.message}</p>
+                     <small>${msg.time}</small>`;
       messagesList.appendChild(div);
       setTimeout(()=>div.classList.remove("new"),2000);
     });
@@ -314,7 +303,7 @@ db.ref("curhatan").on("value",snapshot=>{
   }
 });
 
-// Confetti mini 2 detik
+// 🎉 Efek confetti (2 detik)
 function fireConfetti(){
   const canvas=document.createElement("canvas");
   canvas.style.position="fixed"; canvas.style.top=0; canvas.style.left=0;
@@ -334,7 +323,7 @@ function fireConfetti(){
       p.x+=p.dx; p.y+=p.dy;
       ctx.fillStyle=p.color; ctx.fillRect(p.x,p.y,6,6);
     });
-    count++; if(count<120) requestAnimationFrame(anim); else canvas.remove(); // ~2 detik
+    count++; if(count<120) requestAnimationFrame(anim); else canvas.remove();
   }
   anim();
 }
@@ -368,6 +357,8 @@ document.body.addEventListener('click', (e)=>{
     closeMenu();
   }
 });
+
+
 
 </script>
 </body>
